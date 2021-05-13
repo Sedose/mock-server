@@ -11,6 +11,6 @@ app.get(
 )
 
 app.listen(
-  8080,
+  process.env.PORT || 5000,
   () => console.log('server started')
 )
