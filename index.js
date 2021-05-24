@@ -7,8 +7,17 @@ app.get(
   (request, response) => {
     console.log('current time is: ', new Date().toUTCString())
     console.log('received request headers: ', request.headers)
-    response.end('mock response')
+    response.end('mock response for HTTP GET')
   }
+)
+
+app.put(
+    "/",
+    (request, response) => {
+        console.log('current time is: ', new Date().toUTCString())
+        console.log('received request headers: ', request.headers)
+        response.end('mock response for HTTP PUT')
+    }
 )
 
 app.listen(
